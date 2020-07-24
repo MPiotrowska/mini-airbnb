@@ -1,6 +1,40 @@
-.info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
+
+.container-image {
+    border-radius: 1rem;
+    height: 20rem;
+    width: 100vw;
 }
+
+.container-info {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+    
+.container-description {
+    padding-bottom: 3rem;
+    font-weight: 500;
+}  
+
+.container-ratings {
+    display: flex;
+    align-items: center;
+}
+
+
+.host {
+    border:solid .016rem black;
+    height: 1.5rem;
+    width: 7rem;
+    border-radius:1rem;
+}
+
+.star {
+    fill: #f18686;
+
+}
+
+

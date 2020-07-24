@@ -1,0 +1,10 @@
+    
+    .container {
+    height: 95vh;
+    display: grid;
+    justify-content: center;
+    grid-gap: 1.7rem;
+    grid-template-columns: 31rem  31rem 31rem ;
+    }
+    
+      
