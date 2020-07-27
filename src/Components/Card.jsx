@@ -4,7 +4,7 @@ import "./CardStyle.css";
 function Card(props) {
   return (
     <section className="container-card">
-      <img className="container-image" src={props.place.photo} />
+      <img loading="lazy" className="container-image" src={props.place.photo} />
       <div className="container-info">
         {props.place.superHost === true && <span className="host">Super host</span>}
         <div className="container-place">
