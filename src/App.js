@@ -1,5 +1,6 @@
 import React from 'react';
 import Properties from './Components/Properties';
+import Header from './Components/Header';
 
 
 
@@ -7,6 +8,7 @@ import Properties from './Components/Properties';
 function App() {
   return (
     <div >
+      <Header/>
       <Properties/>
     </div>
   );
