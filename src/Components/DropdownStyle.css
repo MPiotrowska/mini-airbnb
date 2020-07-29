@@ -1,0 +1,14 @@
+.dropdownButton {
+    position: relative;
+}
+
+.labelBox {
+    position: absolute;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    top:10px;
+    left:15px;
+    
+
+}
