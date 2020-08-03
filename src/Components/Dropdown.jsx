@@ -14,7 +14,7 @@ function Dropdown() {
   return (
     <div className="dropdownButton">
       <Downshift>
-        {({ getLabelProps, getInputProps }) => (
+        {({ getLabelProps, getInputProps, isOpen}) => (
           <div>
             <label className="labelBox" {...getLabelProps()}>Location</label>
             <input className="downshiftBox" {...getInputProps()} />
