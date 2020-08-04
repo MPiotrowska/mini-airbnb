@@ -6,7 +6,7 @@ function Buttons(props) {
       <button type="button" className="decrement" onClick={props.onDecrement}>
         -
       </button>
-      <p>{props.state}</p>
+      <p>{props.guestStatus}</p>
       <button type="button" className="increment" onClick={props.onIncrement}>
         +
       </button>

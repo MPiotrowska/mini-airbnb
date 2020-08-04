@@ -8,8 +8,12 @@ import Guests from './Guests';
 
 
 function Form() {
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
   return (
-    <form action="" className="form" >
+    <form action="" className="form" onSubmit={handleSubmit }>
       <Dropdown/>
       <Guests/>
         <Search/>
