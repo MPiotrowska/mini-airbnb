@@ -3,7 +3,7 @@ import "./SearchStyle.css";
 
 function Search() {
   return (
-    <div>
+    <div className="searchBTnContainer">
       <button className="searchButton">
         <svg
           className="search"

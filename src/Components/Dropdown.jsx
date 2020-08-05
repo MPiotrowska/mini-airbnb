@@ -2,13 +2,15 @@ import React from "react";
 import "./DropdownStyle.css";
 import Downshift from "downshift";
 import data from "../api/stays.json";
-import matchSorter from "match-sorter"
+import { store } from '../Lib/store';
 
 const itemToString = (place) => (place ? place.city : "");
 
-
-
 function Dropdown() {
+
+  const [selectedValue, setSelectedValue] = React.useState("");
+  const globalState = React.useContext(store);
+  const { dispatch } = globalState;
   const unique = [];
 
   data.map((obj) =>
@@ -19,8 +21,6 @@ function Dropdown() {
       : unique.push(obj)
   );
 
-  console.log(unique);
-
   return (
     <div className="dropdownButton">
       <Downshift itemToString={itemToString}>
@@ -28,13 +28,23 @@ function Dropdown() {
           getLabelProps,
           getInputProps,
           getMenuProps,
-          isOpen,
           getItemProps,
-          highlightedIndex,
-          inputValue
+          inputValue,
+          isOpen,
+          highlightedIndex
         }) => {
+
+          // const setCity = payload => {
+          //   return {
+          //     type: 'SET_CITY',
+          //     payload
+          //   }
+          // };
+
+          setSelectedValue(inputValue);
+
           return (
-            <div>
+            <div className="dropdownBtnContainer">
               <label className="labelBox" {...getLabelProps()}>
                 Location
               </label>

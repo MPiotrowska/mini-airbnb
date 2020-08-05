@@ -1,9 +1,28 @@
 .guestsButton {
     width: 9rem;
     height: 100%;
+    border: 0;
+    background-color: white;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+
+   
+   
+   
+    border: 0.1px solid rgb(236, 234, 234);;
+}
+    
+.guestsButton:hover {
+    border-color: black;
+    border-radius: 0.6rem;
+}
+   
    
 
-}
+
 .numberButton {
     display: flex;
 }
+
+
+  

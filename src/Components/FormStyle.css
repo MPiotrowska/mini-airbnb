@@ -1,4 +1,10 @@
 .form {
     display: flex;
     height: 20%;
+    border: 1px solid rgb(190, 187, 187);
+    border-radius: 0.6rem;
+    border-style: groove;
+  
+  
+
 }
