@@ -1,16 +1,14 @@
-import React from 'react';
-import Properties from './Components/Properties';
-import Header from './Components/Header';
-
-
-
+import React from "react";
+import PropertiesList from "./Components/PropertiesList";
+import Header from "./Components/Header";
+import { FormProvider } from "./Lib/store";
 
 function App() {
   return (
-    <div >
-      <Header/>
-      <Properties/>
-    </div>
+    <FormProvider>
+      <Header />
+      <PropertiesList />
+    </FormProvider>
   );
 }
 

@@ -1,11 +1,27 @@
 import React from "react";
 import Buttons from "./Buttons";
 import "./GuestsStyle.css";
+import { useFormState, useFormDispatch } from "../Lib/store";
+import { setAdults,  setChildren } from '../Lib/actions'
 
 function Guests() {
   const [adultsNumber, setAdultsNumber] = React.useState(0);
   const [childrenNumber, setChildrenNumber] = React.useState(0);
   const [showGuestOptions, setShowGuestOptions] = React.useState(false);
+
+  const state = useFormState();
+  const dispatch = useFormDispatch();
+
+  // React use effect hook to listen for changes
+  // in adultsNumber and dispatch to the reducer
+
+  React.useEffect(() => {
+    dispatch(setAdults(adultsNumber))
+  }, [adultsNumber])
+
+  React.useEffect(() => {
+    dispatch(setChildren(childrenNumber))
+  }, [childrenNumber])
 
   const handleIncrementAdults = () => {
     setAdultsNumber(adultsNumber + 1);

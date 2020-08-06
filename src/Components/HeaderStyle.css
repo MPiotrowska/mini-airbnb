@@ -1,4 +1,7 @@
-.header {
+.header-inner {
     display: flex;
     height: 10rem;
+    justify-content: space-between;
+    max-width: 1420px;
+    margin: 0 auto;
 }

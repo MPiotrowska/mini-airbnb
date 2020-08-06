@@ -4,9 +4,16 @@ import "./CardStyle.css";
 function Card(props) {
   return (
     <section className="container-card">
-      <img alt="" loading="lazy" className="container-image" src={props.place.photo} />
+      <img
+        alt=""
+        loading="lazy"
+        className="container-image"
+        src={props.place.photo}
+      />
       <div className="container-info">
-        {props.place.superHost === true && <span className="host">Super host</span>}
+        {props.place.superHost === true && (
+          <span className="host">Super host</span>
+        )}
         <div className="container-place">
           <h4 className="container-place-title">{props.place.type}</h4>
           {props.place.beds && (
@@ -39,5 +46,3 @@ function Card(props) {
 }
 
 export default Card;
-
-

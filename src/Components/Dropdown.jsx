@@ -2,15 +2,28 @@ import React from "react";
 import "./DropdownStyle.css";
 import Downshift from "downshift";
 import data from "../api/stays.json";
-import { store } from '../Lib/store';
+import { useFormState, useFormDispatch } from "../Lib/store";
+import { setCity, setCleared } from '../Lib/actions'
 
 const itemToString = (place) => (place ? place.city : "");
 
 function Dropdown() {
-
   const [selectedValue, setSelectedValue] = React.useState("");
-  const globalState = React.useContext(store);
-  const { dispatch } = globalState;
+  const state = useFormState();
+  const dispatch = useFormDispatch();
+
+
+  React.useEffect(() => {
+     dispatch(setCity(selectedValue))
+  }, [selectedValue])
+
+  React.useEffect(() => {
+    if(state.submitted === true) {
+      setSelectedValue("")
+    }
+ }, [state.submitted])
+
+
   const unique = [];
 
   data.map((obj) =>
@@ -31,15 +44,8 @@ function Dropdown() {
           getItemProps,
           inputValue,
           isOpen,
-          highlightedIndex
+          highlightedIndex,
         }) => {
-
-          // const setCity = payload => {
-          //   return {
-          //     type: 'SET_CITY',
-          //     payload
-          //   }
-          // };
 
           setSelectedValue(inputValue);
 
@@ -51,11 +57,26 @@ function Dropdown() {
               <input className="downshiftBox" {...getInputProps()} />
 
               <div>
-                <ul {...getMenuProps({style: {maxHeight: 50, overflowY: 'scroll'}})}>
+                <ul
+                  {...getMenuProps({
+                    style: { maxHeight: 50, overflowY: "scroll" },
+                  })}
+                >
                   {isOpen
                     ? unique.map((item, index) => {
                         return (
-                          <li {...getItemProps({ item, key: item.id,  style: { backgroundColor: index === highlightedIndex ? "lightgray" : null, }})}>
+                          <li
+                            {...getItemProps({
+                              item,
+                              key: item.id,
+                              style: {
+                                backgroundColor:
+                                  index === highlightedIndex
+                                    ? "lightgray"
+                                    : null,
+                              },
+                            })}
+                          >
                             {item.city} {item.country}
                           </li>
                         );
