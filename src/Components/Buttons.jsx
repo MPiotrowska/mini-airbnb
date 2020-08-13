@@ -3,11 +3,11 @@ import React from "react";
 function Buttons(props) {
   return (
     <div className="numberButton">
-      <button type="button" className="decrement" onClick={props.onDecrement}>
+      <button type="button" className="decrement signButtons" onClick={props.onDecrement}>
         -
       </button>
-      <p>{props.guestStatus}</p>
-      <button type="button" className="increment" onClick={props.onIncrement}>
+      <p className="numberStyle paragraphFade">{props.guestStatus}</p>
+      <button type="button" className="increment signButtons" onClick={props.onIncrement}>
         +
       </button>
     </div>

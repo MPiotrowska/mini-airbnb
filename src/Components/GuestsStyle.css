@@ -1,3 +1,29 @@
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-content: flex-start;
+    border-bottom: 1px solid #8080803d;
+    margin-bottom: 5px;
+    padding: 15px 0;
+}
+
+.row:last-child {
+    border: 0;
+    padding: 15px 0 0 0;
+}
+
+.guestOptionsContainer {
+	position: absolute;
+	top: 80px;
+	border: 1px solid #8080802e;
+	border-radius: 9px;
+	padding: 10px 20px;
+	min-width: 300px;
+	right: 34px;
+    background: white;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+}
+
 .guestsButton {
     width: 9rem;
     height: 100%;
@@ -5,24 +31,69 @@
     background-color: white;
     transition: all .4s ease-in-out;
     cursor: pointer;
-
-   
-   
-   
+    position: relative;
     border: 0.1px solid rgb(236, 234, 234);;
+}
+
+.guestsLabel {
+   position: absolute;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    top:2px;
+    left:15px;
+}
+
+.guestsPlaceholder {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 200;
+    top:15px;
+    left:15px;
 }
     
 .guestsButton:hover {
     border-color: black;
     border-radius: 0.6rem;
 }
-   
-   
 
+.signButtons {
+	background: transparent;
+	border: 1px solid gray;
+	border-radius: 50%;
+	height: 36px;
+	width: 36px;
+	font-size: 22px;
+	line-height: 32px;
+}
 
 .numberButton {
     display: flex;
+    align-items:center;
+    font-size: 0.8rem; 
+    padding-top: 5px;  
+    padding-bottom: 10px;   
 }
 
+.numberStyle {
+    padding: 5px;
+}
+.paragraphStyle {
+    padding-top: 5px;
+    font-size: 0.8rem;
+    
+}
+.paragraphFont {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
 
+.paragraphFade,
+#downshift-1-input {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgb(113, 113, 113);
+}
   

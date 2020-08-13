@@ -17,7 +17,7 @@
     font-size: 0.5rem;
     text-transform: uppercase;
     font-weight: 500;
-    top:10px;
+    top:3px;
     left:15px;
 } 
 
@@ -27,6 +27,9 @@
   border-radius: 0.6rem;
   transition: all .4s ease-in-out;
   border: 1px solid transparent;
+  padding-left: 13px;
+  padding-top: 12px ;
+  font-size: 0.8rem;
 }
 
 
@@ -35,4 +38,9 @@
   border-radius: 0.6rem;
 
  
+}
+
+.placesList{
+  padding-top: 3px ;
+  font-size: 0.8rem;
 }

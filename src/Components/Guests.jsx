@@ -2,7 +2,7 @@ import React from "react";
 import Buttons from "./Buttons";
 import "./GuestsStyle.css";
 import { useFormState, useFormDispatch } from "../Lib/store";
-import { setAdults,  setChildren } from '../Lib/actions'
+import { setAdults, setChildren } from "../Lib/actions";
 
 function Guests() {
   const [adultsNumber, setAdultsNumber] = React.useState(0);
@@ -16,12 +16,12 @@ function Guests() {
   // in adultsNumber and dispatch to the reducer
 
   React.useEffect(() => {
-    dispatch(setAdults(adultsNumber))
-  }, [adultsNumber])
+    dispatch(setAdults(adultsNumber));
+  }, [adultsNumber]);
 
   React.useEffect(() => {
-    dispatch(setChildren(childrenNumber))
-  }, [childrenNumber])
+    dispatch(setChildren(childrenNumber));
+  }, [childrenNumber]);
 
   const handleIncrementAdults = () => {
     setAdultsNumber(adultsNumber + 1);
@@ -50,25 +50,38 @@ function Guests() {
   return (
     <div>
       <button type="button" className="guestsButton" onClick={showGuests}>
-        <h4>Guests</h4>
+        <span className="guestsLabel">Guests</span>
+        <span className="guestsPlaceholder paragraphFade">Add guests</span>
       </button>
       {showGuestOptions ? (
-        <>
-          <p>Adults</p>
-          <p>Ages 13 or above </p>
-          <Buttons
-            guestStatus={adultsNumber}
-            onIncrement={handleIncrementAdults}
-            onDecrement={handleDecrementAdults}
-          />
-          <p>Children</p>
-          <p>Ages 2-12</p>
-          <Buttons
-            guestStatus={childrenNumber}
-            onIncrement={handleIncrementChildren}
-            onDecrement={handleDecrementChildren}
-          />
-        </>
+        <article className="guestOptionsContainer">
+          <div className="row">
+            <div className="textContainer">
+              <p className="paragraphStyle paragraphFont">Adults</p>
+              <p className="paragraphStyle paragraphFade">Ages 13 or above </p>
+            </div>
+            <div className="guestButtonInnerContainer">
+              <Buttons
+                guestStatus={adultsNumber}
+                onIncrement={handleIncrementAdults}
+                onDecrement={handleDecrementAdults}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="textContainer">
+              <p className="paragraphStyle paragraphFont">Children</p>
+              <p className="paragraphStyle paragraphFade">Ages 2-12</p>
+            </div>
+            <div className="guestButtonInnerContainer">
+              <Buttons
+                guestStatus={childrenNumber}
+                onIncrement={handleIncrementChildren}
+                onDecrement={handleDecrementChildren}
+              />
+            </div>
+          </div>
+        </article>
       ) : null}
     </div>
   );
