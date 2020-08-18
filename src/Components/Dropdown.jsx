@@ -3,7 +3,7 @@ import "./DropdownStyle.css";
 import Downshift from "downshift";
 import data from "../api/stays.json";
 import { useFormState, useFormDispatch } from "../Lib/store";
-import { setCity, setCleared } from '../Lib/actions'
+import { setCity, setFocused, setSubmitted } from '../Lib/actions'
 
 const itemToString = (place) => (place ? place.city : "");
 
@@ -11,6 +11,11 @@ function Dropdown() {
   const [selectedValue, setSelectedValue] = React.useState("");
   const state = useFormState();
   const dispatch = useFormDispatch();
+
+  const handleClick = () => {
+    dispatch(setSubmitted(false))
+    dispatch(setFocused(false))
+  }
 
 
   React.useEffect(() => {
@@ -35,7 +40,7 @@ function Dropdown() {
   );
 
   return (
-    <div className="dropdownButton">
+    <div className="dropdownButton" onClick={handleClick}>
       <Downshift itemToString={itemToString}>
         {({
           getLabelProps,
