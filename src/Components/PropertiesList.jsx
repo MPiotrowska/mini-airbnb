@@ -11,10 +11,10 @@ function PropertiesList() {
   function requestProperties(propertyObj) {
     return propertyObj.city === state.city && propertyObj.maxGuests >= state.totalGuests
   }
-
+  
   React.useEffect(() => {
-    if (state.city.length > 0 && state.totalGuests > 0) {
-      const filteredProperties = properties.filter(requestProperties);
+    if (state.city.length > 0 && state.submitted === true) {
+      const filteredProperties = data.filter(requestProperties);
       setProperties(filteredProperties);
     }
   }, [state.submitted]);
