@@ -19,9 +19,16 @@ export function setChildren(numberOfChildren) {
     };
   }
 
-  export function setSubmitted() {
+  export function setSubmitted(submitted) {
     return {
       type: "SET_SUBMITTED",
+      submitted,
     };
   }
 
+  export function setFocused(guestBtnFocus) {
+    return {
+      type: "SET_FOCUSED",
+      guestBtnFocus,
+    };
+  }

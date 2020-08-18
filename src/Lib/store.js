@@ -5,11 +5,13 @@ const initialState = {
   adults: 0,
   children: 0,
   totalGuests: 0,
-  submitted: false
+  submitted: false,
+  guestBtnFocus: false
 };
 
 const FormStateContext = React.createContext();
 const FormDispatchContext = React.createContext();
+
 
 function formReducer(state, action) {
   switch (action.type) {
@@ -36,12 +38,18 @@ function formReducer(state, action) {
     case "SET_SUBMITTED":
       const submittedForm = {
         ...state,
-        submitted: true,
+        submitted: action.submitted,
       };
       return submittedForm;
-
+      case "SET_FOCUSED":
+      const focusedGuestBtn ={
+        ...state,
+        guestBtnFocus: action.guestBtnFocus,
+      }
+      return focusedGuestBtn;
     default:
       throw new Error();
+
   }
 }
 
