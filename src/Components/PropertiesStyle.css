@@ -1,13 +1,12 @@
     
     
-    .container {
-    height: 95vh;
+.container {
     display: grid;
     justify-content: center;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
-     max-width: 1440px; 
+    max-width: 1440px; 
     margin: 0 auto;
-    }
+}
 
       

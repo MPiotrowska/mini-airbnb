@@ -58,7 +58,7 @@
 
 @media screen and (width: 320px) {
     .container-card {
-        width: calc(100% - 100px);
+        width: calc(100% - 125px);
     }
 }
 

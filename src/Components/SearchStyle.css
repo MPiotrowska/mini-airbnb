@@ -2,9 +2,14 @@
 	display: flex;
 	justify-content: inherit;
 	width: 100%;
-	min-width: 80px;
+	width: 80px;
 }
 
+@media screen and (max-width: 640px) {
+    .searchBTnContainer {
+        max-width: 50px;
+    };
+}
 
 .search {
 width: 20px;
