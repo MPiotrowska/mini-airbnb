@@ -1,7 +1,7 @@
 .header-inner {
     display: flex;
-    height: 10rem;
+    flex-wrap: wrap;
+    height: 80px;
     justify-content: space-between;
-    max-width: 1420px;
     margin: 0 auto;
 }

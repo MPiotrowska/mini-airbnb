@@ -1,3 +1,5 @@
-.logoContainer {
-    flex-basis: 100%;
+@media screen and (max-width: 640px) {
+    .logoContainer {
+        flex-basis: 100%;
+    }
 }

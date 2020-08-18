@@ -23,6 +23,18 @@ height: 12px;
     cursor: pointer;
 }
 
+.searchButtonText {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .searchButtonText  {
+        display: inline;
+    }
+}
+
+
+
 /* 
 @media screen and (width: 320px) {
     .searchButton  {

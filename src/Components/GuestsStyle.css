@@ -19,9 +19,15 @@
 	border-radius: 9px;
 	padding: 10px 20px;
 	min-width: 300px;
-	right: 34px;
+	right: 11%;
     background: white;
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+}
+
+@media screen and (min-width: 1825px) {
+    .guestOptionsContainer {
+        right: 15%;
+    }
 }
 
 .guestsButton {
