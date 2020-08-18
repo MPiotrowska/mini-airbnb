@@ -47,12 +47,12 @@ function Guests() {
 
   const showGuests = () => {
     dispatch(setSubmitted(false))
-    dispatch(setFocused(true))
+    dispatch(setFocused(!state.guestBtnFocus))
   };
 
   return (
     <div>
-      <button type="button" className="guestsButton" onClick={showGuests}>
+      <button type="button" className="guestsButton formButton" onClick={showGuests}>
         <span className="guestsLabel">Guests</span>
         <span className="guestsPlaceholder paragraphFade">Add guests</span>
       </button>
