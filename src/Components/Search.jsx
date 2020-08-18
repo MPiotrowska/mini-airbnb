@@ -26,7 +26,7 @@ function Search() {
             rule="evenodd"
           />
         </svg>
-        Search
+       <span className="searchButtonText">Search</span> 
       </button>
     </div>
   );
