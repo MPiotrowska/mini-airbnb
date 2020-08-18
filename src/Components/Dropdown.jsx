@@ -64,7 +64,7 @@ function Dropdown() {
               <div>
                 <ul
                   {...getMenuProps({
-                    style: { maxHeight: 100, overflowY: "scroll" },
+                    style: { maxHeight: 300, overflowY: "scroll" },
                   })}
                 >
                   {isOpen
