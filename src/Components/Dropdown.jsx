@@ -40,7 +40,7 @@ function Dropdown() {
   );
 
   return (
-    <div className="dropdownButton" onClick={handleClick}>
+    <div className="dropdownButton formButton" onClick={handleClick}>
       <Downshift itemToString={itemToString}>
         {({
           getLabelProps,
