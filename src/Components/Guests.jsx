@@ -2,7 +2,7 @@ import React from "react";
 import Buttons from "./Buttons";
 import "./GuestsStyle.css";
 import { useFormState, useFormDispatch } from "../Lib/store";
-import { setAdults, setChildren } from "../Lib/actions";
+import { setAdults, setChildren, setSubmitted, setFocused } from "../Lib/actions";
 
 function Guests() {
   const [adultsNumber, setAdultsNumber] = React.useState(0);
@@ -12,8 +12,6 @@ function Guests() {
   const state = useFormState();
   const dispatch = useFormDispatch();
 
-  // React use effect hook to listen for changes
-  // in adultsNumber and dispatch to the reducer
 
   React.useEffect(() => {
     dispatch(setAdults(adultsNumber));
@@ -22,6 +20,10 @@ function Guests() {
   React.useEffect(() => {
     dispatch(setChildren(childrenNumber));
   }, [childrenNumber]);
+
+  React.useEffect(() => {
+    setShowGuestOptions(state.guestBtnFocus);
+  }, [state.guestBtnFocus])
 
   const handleIncrementAdults = () => {
     setAdultsNumber(adultsNumber + 1);
@@ -44,7 +46,8 @@ function Guests() {
   };
 
   const showGuests = () => {
-    setShowGuestOptions(!showGuestOptions);
+    dispatch(setSubmitted(false))
+    dispatch(setFocused(true))
   };
 
   return (
