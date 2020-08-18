@@ -12,9 +12,8 @@
 }
 
 .search {
-width: 20px;
-height: 12px;
-  
+    width: 20px;
+    height: 12px;  
 }
 
 .searchButton {
@@ -37,20 +36,4 @@ height: 12px;
         display: inline;
     }
 }
-
-
-
-/* 
-@media screen and (width: 320px) {
-    .searchButton  {
-         height: 50%;
-         font-size: 0.6rem;
-    }
-    .search {
-        width: 15px;
-        height: 8px;
-          
-        }
-
-} */
 
