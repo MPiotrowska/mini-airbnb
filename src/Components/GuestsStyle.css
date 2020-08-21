@@ -26,8 +26,8 @@
 
 @media screen and (max-width: 640px) {
     .guestOptionsContainer {
-        top: 20%;
-        right: 3%;
+        top: 101px;
+        right: 8%;
     }
 }
 
