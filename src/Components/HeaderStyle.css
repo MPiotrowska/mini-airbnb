@@ -1,7 +1,15 @@
+.header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+
+
 .header-inner {
     display: flex;
     flex-wrap: wrap;
     height: 80px;
+    align-items: center;
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 20px;

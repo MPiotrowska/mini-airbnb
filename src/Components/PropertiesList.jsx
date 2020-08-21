@@ -20,11 +20,14 @@ function PropertiesList() {
   }, [state.submitted]);
 
   return (
+    <>
+    <h3 className="propertiesListTitle">Explore near and far from ordinary</h3>
     <div className="container">
       {properties.map((place) => {
         return <Card place={place} />;
       })}
     </div>
+    </>
   );
 }
 export default PropertiesList;

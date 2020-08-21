@@ -2,29 +2,27 @@
     position: relative;
    height: 100%;
    flex: 1;
-
 } 
 
 .dropdownBtnContainer {
     height: 100%;
     border-radius: 0.6rem 0rem 0rem 0.6rem;
-    border: 0.1px solid rgb(236, 234, 234);;
-
-}
+  }
 
 .labelBox {
+    letter-spacing: 1px;
     position: absolute;
     font-size: 0.5rem;
     text-transform: uppercase;
-    font-weight: 500;
-    top:3px;
+    font-weight: 600;
+    top: 4px;
     left:15px;
-} 
+  }  
 
 .downshiftBox {
   border: 0;
   height: 100%;
-  border-radius: 0.6rem;
+  border-radius: .4rem 0 0 .4rem;
   transition: all .4s ease-in-out;
   border: 1px solid transparent;
   padding-left: 13px;
@@ -33,9 +31,9 @@
   width: 100%;
 }
 
-.downshiftBox:hover {
+/* .downshiftBox:hover {
   border-color: black;
-}
+} */
 
 #downshift-1-menu {
 	background: white;

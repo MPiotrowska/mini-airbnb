@@ -22,7 +22,7 @@
     color: white;
     background-color:#EB5757;
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 0 .4rem .4rem 0;
     font-size: 0.8rem;
     cursor: pointer;
 }
