@@ -1,5 +1,12 @@
-    
-    
+.propertiesListTitle {
+    font-weight: 600;
+    margin: 2rem;
+    font-size: 22px;
+    line-height: 26px;
+    color: #222;
+    text-align: center;
+}
+
 .container {
     display: grid;
     justify-content: center;

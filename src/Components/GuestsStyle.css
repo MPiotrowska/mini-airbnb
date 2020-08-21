@@ -46,11 +46,12 @@
     cursor: pointer;
     position: relative;
     border: 0.1px solid rgb(236, 234, 234);
-    border-radius: .6rem;
 }
 
 .guestsLabel {
-   position: absolute;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    position: absolute;
     font-size: 0.5rem;
     text-transform: uppercase;
     font-weight: 600;
