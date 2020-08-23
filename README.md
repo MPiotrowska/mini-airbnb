@@ -13,6 +13,10 @@ After deployment, I decided to reiterate and added a full-width hero section as 
   - I can filter properties by location and number of guests
   - I can see pages following given designs
 
+## A11y
+
+ For a `WAI-ARIA` compliant Search / Dropdown component, I decided to use [Downshift](https://www.downshift-js.com/).
+
 ## Live Link
 
 The site is hosted on Netlify and you can visit it [here](https://mini-airbnb.netlify.app/).
@@ -44,6 +48,7 @@ To track the progress of all subsequent iterations, I decided to use [Github's o
 This project uses the following tech:
 
   - [Create React App](https://github.com/facebookincubator/create-react-app)
+  - [Downshift](https://www.downshift-js.com/)
   - [Netlify](https://www.netlify.com/)
 
 ## State Management
