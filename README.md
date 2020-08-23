@@ -1,13 +1,28 @@
 
-# WindBnb (Airbnb Simple Version)
+# WindBnb
 
-This project is a simplified version of Airbnb. I started working on this as part of the [Dev challenges project ideas](https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD), but eventually decided to add a bit of the original Airbnb homepage design, that includes a full-width hero section (screenshot below).
+This project is a simplified version of Airbnb. During the project's first iteration, I partly followed the Figma designs that were provided by the [Dev challenges project ideas page](https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD).
+
+After deployment, I decided to reiterate and added a full-width hero section as seen in Airbnb's homepage (screenshot below).
+
+## 📰 User Stories
+
+  - I can see a list of properties
+  - I can see property card with a name, rating, apartment type, and super host
+  - I can open filter drawer
+  - I can filter properties by location and number of guests
+  - I can see pages following given designs
 
 ## Live Link
 
 The site is hosted on Netlify and you can visit it [here](https://mini-airbnb.netlify.app/).
 
-## Designs
+
+## Project Management
+
+To track the progress of all subsequent iterations, I decided to use [Github's own Kanban style board](https://github.com/MPiotrowska/mini-airbnb/projects/1) and automate the process using pull requests. 
+
+## 🎨 Designs
 
 ##### Airbnb Homepage | (Design 1)
 
@@ -24,7 +39,7 @@ The site is hosted on Netlify and you can visit it [here](https://mini-airbnb.ne
     <img src="/designs/windbnb-design.png" width="900px" /> 
 </div>
 
-## Tech
+## 🚀 Tech
 
 This project uses the following tech:
 
@@ -33,7 +48,7 @@ This project uses the following tech:
 
 ## State Management
 
-Since components of the app needed to share state, I decided to experiment with React's [Context API](https://reactjs.org/docs/context.html).
+This project uses the [React Context API](https://reactjs.org/docs/context.html) with React Hooks and more specifically the native React.`useReducer` hook.
 
 
 ## Setup
